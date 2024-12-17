@@ -1,0 +1,9 @@
+venv
+.idea
+.dev
+.venv
+.env
+__pycache__
+.pytest_cache
+.vscode/
+acme.json

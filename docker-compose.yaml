@@ -1,0 +1,18 @@
+services:
+  mongo:
+    image: mongo
+    restart: always
+    volumes:
+      - mongo_data:/data/db
+
+  webapp:
+    build: ./
+    command: /bin/sh run.sh
+    ports:
+      - 80:80
+    restart: always
+    depends_on:
+      - mongo
+
+volumes:
+  mongo_data:
